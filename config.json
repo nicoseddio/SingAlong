@@ -1,11 +1,36 @@
 {
     "settings": {
+        "defaults": {
 
+        }
     },
     "songs": {
-
+        "0db14121-1d3e-41e3-ae39-04f2cd5a5e41": {
+            "title": "Come Thou Fount",
+            "artist": "ddcfedaa-efd9-460b-b320-d417d58c1fd7",
+            "lyrics": {
+                "1": "Come thou fount of every blessing",
+                "2": "tune my heart to sing Thy praise"
+            },
+            "charts": {
+                "Version 1": {
+                    "60fb16e1-4a2f-4da6-825a-16102e29aeb3": {
+                        "name": "Rhythm Guitar",
+                        "1": "          G              C",
+                        "2": "        D                 G"
+                    }
+                }
+            }
+        }
     },
     "artists": {
-        
+        "ddcfedaa-efd9-460b-b320-d417d58c1fd7": {
+            "name": "Steph Macleod"
+        }
+    },
+    "instruments": {
+        "60fb16e1-4a2f-4da6-825a-16102e29aeb3": {
+            "name": "Guitar"
+        }
     }
 }

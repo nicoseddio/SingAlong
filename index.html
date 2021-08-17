@@ -28,19 +28,19 @@
   <!-- your content here... -->
   <script src="js/scripts.js"></script>
 
-  <div class="height-w-toolbar">
+  <div id="MainWindow" class="height-w-toolbar">
 
-    <!-- Left (Library) Panel -->
-    <div class="left width-one-fourth height-full bg1">
+    <div id="LibraryPanel" class="left width-one-fourth height-full tabcontent bg1">
       <div class="toolbar tabs">
-        <button>Songs</button>
-        <button>Artists</button>
-        <button>References</button>
-        <button>Manage</button>
+        <!-- Remove Carriage Returns between buttons -->
+           <button onclick="openTab(event,'SongsTab')" class="tabbutton">Songs</button><!--
+        --><button onclick="openTab(event,'ArtistsTab')">Artists</button><!--
+        --><button onclick="openTab(event,'ReferencesTab')">References</button><!--
+        --><button onclick="openTab(event,'ManagementTab')">Manage</button>
       </div>
 
       <!-- Songs List Content -->
-      <div class="tabs-content height-w-toolbar scroll hidden">
+      <div id="SongsTab" class="tabcontent height-w-toolbar scroll">
         <!-- Example song entries -->
         <div class="module">
           <h1 class="title">Song Title</h1>
@@ -71,42 +71,40 @@
           <h2 class="subtitle">Song Author</h2>
         </div>
       </div>
-      <!-- End Songs List -->
 
-      <!-- Setlist Content -->
-      <div class="tabs-content hidden">
+      <div id="ArtistsTab" class="tabcontent height-w-toolbar hidden bg2">
       </div>
 
-      <!-- Chords Reference Content -->
-      <div class="tabs-content hidden">
+      <div id="ReferencesTab" class="tabcontent height-w-toolbar hidden bg3">
       </div>
 
-      <!-- Options List Content -->
-      <div class="tabs-content hidden">
+      <div id="ManagementTab" class="tabcontent height-w-toolbar hidden">
       </div>
 
     </div>
-    <!-- End Left (Library) Panel -->
 
-    <!-- Right (Song) Panel -->
-    <div class="left width-three-fourths height-full scroll">
+    <div id="OptionsPanel" class="left width-one-fourth height-full tabcontent bg2 hidden">
+    </div>
+
+    <div id="SetlistPanel" class="left width-one-fourth height-full tabcontent bg3 hidden">
+    </div>
+
+    <div id='RenderWindow' class="left width-three-fourths height-full scroll" style="min-width: 75%; max-width: 100%;">
       <div class="document">
         <h1>Song Title</h1>
         <h2>Song Author</h2>
       </div>
     </div>
   </div>
-  <!-- End Songs List -->
 
   <!-- Lower (Tools) Bar -->
   <div class="toolbar">
-    <div class="left width-one-fourth">
-      <button class="">Close</button>
-      <button class="">Library</button>
-      <button class="">Setlist</button>
-      <button class="">Options</button>
+    <div class="left toolbar width-one-fourth">
+       <button onclick="openPanel(event,'LibraryPanel')" class="width-one-third">Library</button><!--
+    --><button onclick="openPanel(event,'SetlistPanel')" class="width-one-third">Setlist</button><!--
+    --><button onclick="openPanel(event,'OptionsPanel')" class="width-one-third">Options</button>
     </div>
-    <div class="left width-three-fourths">
+    <div class="left toolbar width-three-fourths">
       <button>Instrument</button>
       <span>Transpose</span>
       <button>–</button>
